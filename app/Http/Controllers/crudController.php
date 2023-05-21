@@ -9,7 +9,10 @@ use PhpOption\None;
 class crudController extends Controller
 {
     public function index(){
-        return view('index');
+        
+        $employees = Employee::all();
+        $data = compact('employees');
+        return view('index')->with($data);
     }
 
     public function viewEmployeeAddForm(){
@@ -39,5 +42,6 @@ class crudController extends Controller
             return redirect('/add-employee-form')->with('fail','Information not added');
         }
     }
+    
 }
 
