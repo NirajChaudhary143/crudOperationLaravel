@@ -17,6 +17,9 @@ use App\Http\Controllers\crudController;
 Route::get('/',[crudController::class,'index'])->name('home');
 Route::get('/add-employee-form',[crudController::class,'viewEmployeeAddForm'])->name('viewEmployeeAddForm');
 Route::post('/add-employee-form',[crudController::class,'addEmployee'])->name('addEmployee');
+Route::get('/delete-employee/{id}',[crudController::class,'deleteEmployee'])->name('deleteEmployee');
+Route::post('/edit-employee/{id}',[crudController::class,'updateEmployee'])->name('updateEmployee');
+Route::get('/edit-employee/{id}',[crudController::class,'editEmployee'])->name('editEmployee');
 // Route::post('/',[crudController::class,'addEmployee'])->name('addEmployee');
 
 // Route::get('/crud',function(){
