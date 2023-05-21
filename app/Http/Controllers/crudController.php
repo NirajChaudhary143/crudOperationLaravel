@@ -25,7 +25,7 @@ class crudController extends Controller
                 'name'=>'required',
                 'email'=>'required|email|unique:employees',
                 'address'=>'required',
-                'phone'=>'required'
+                'phone'=>'required|size:10'
             ]
         );
         $employee = new Employee();
